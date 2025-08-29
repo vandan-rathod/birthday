@@ -5,7 +5,6 @@ const warning = document.getElementById("warning");
 const reveal = document.getElementById("reveal");
 const loveLetter = document.getElementById("loveLetter");
 const startScreen = document.getElementById("startScreen");
-
 let clickCount = 0;
 const texts =[
     "Not yet 😏 click again!",
@@ -13,12 +12,6 @@ const texts =[
   "Fine fine… one last time 👀",
   "Okay okay, here you go 🎁"
 ];
-
-startBtn.addEventListener("click", () => {
-  music.play();
-  startScreen.classList.add("hidden");
-  reveal.classList.remove("hidden");
-});
 
 prankbtn.addEventListener("click", ()=>{
     clickCount++;
