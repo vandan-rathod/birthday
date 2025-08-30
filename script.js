@@ -50,17 +50,20 @@ prankbtn.addEventListener("click", ()=>{
     }
 });
 
+window.addEventListener("DOMContentLoaded", () => {
+  document.querySelector(".intro").style.display = "block";
+});
+
 // spacebar = show photocard and then love letter
 document.addEventListener("keydown", (e) => {
-    if ((e.code === "Space" || e.key === " ") && !reveal.classList.contains("hidden")) {
+    if ((e.code === "Space" || e.key === " ") && !reveal.classList.contains("visible")) {
         // intro → photocard
-        reveal.classList.add("hidden");
         photocard.classList.remove("hidden");
+        reveal.classList.add("hidden");
     } 
     else if ((e.code === "Space" || e.key === " ") && !photocard.classList.contains("hidden")) {
         // photocard → love letter
         photocard.classList.add("hidden");
-        loveLetter.classList.remove("hidden");
         loveLetter.classList.remove("hidden");
         typeLetter("From the moment you entered my life, everything changed. You’re not just my girlfriend—you’re my best friend, my safe place, and the most beautiful part of every single day. No matter where we are, my heart is always with you. Happy Birthday, my forever love ❤️", loveLetter);
 
