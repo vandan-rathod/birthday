@@ -4,7 +4,7 @@ const loading = document.getElementById("loading");
 const warning = document.getElementById("warning");
 const reveal = document.getElementById("reveal");
 const loveLetter = document.getElementById("loveLetter");
-const startScreen = document.getElementById("startScreen");
+const startScreen = document.getElementById("startScreen"); 
 let clickCount = 0;
 const texts =[
     "Not yet 😏 click again!",
@@ -61,5 +61,18 @@ document.addEventListener("keydown", (e) => {
         // photocard → love letter
         photocard.classList.add("hidden");
         loveLetter.classList.remove("hidden");
+        loveLetter.classList.remove("hidden");
+        typeLetter("From the moment you entered my life, everything changed. You’re not just my girlfriend—you’re my best friend, my safe place, and the most beautiful part of every single day. No matter where we are, my heart is always with you. Happy Birthday, my forever love ❤️", loveLetter);
+
     }
 });
+function typeLetter(text, element) {
+  element.textContent = "";
+  let i = 0;
+  let interval = setInterval(() => {
+    element.textContent += text[i];
+    i++;
+    if (i >= text.length) clearInterval(interval);
+  }, 50);
+}
+
